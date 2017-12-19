@@ -32,14 +32,14 @@ var checkIfValid = function (input, currentStep) {
     validValues[currentStep].forEach(function (category) {
         input = input.toLowerCase();
         category.Aliases.forEach(function (alias) {
-            if (input === alias.toLowerCase()) {
+            if (input.indexOf(alias.toLowerCase()) !== -1) {
                 found = { Id: category.Id };
             }
         });
         var splittedInput = input.split(' ');
         splittedInput.forEach(function (word) {
             category.Aliases.forEach(function (alias) {
-                if (word === alias.toLowerCase()) {
+                if (word.indexOf(alias.toLowerCase()) !== -1) {
                     found = { Id: category.Id };
                 }
             });

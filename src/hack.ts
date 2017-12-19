@@ -1,7 +1,6 @@
 const socket = io.connect('http://localhost:3000');
 
 declare const chrome: any;
-declare const angular: any;
 
 const validValues: any = {
     0 : [
@@ -43,7 +42,7 @@ const checkIfValid = (input: string, currentStep: number) : [boolean, string] =>
         input = input.toLowerCase();
         
         category.Aliases.forEach((alias: string) => {
-            if(input === alias.toLowerCase()) {
+            if(input.indexOf(alias.toLowerCase()) !== -1) {
                 found = { Id: category.Id };
             }            
         });
@@ -52,7 +51,7 @@ const checkIfValid = (input: string, currentStep: number) : [boolean, string] =>
         
         splittedInput.forEach((word: string) => {
             category.Aliases.forEach((alias: string) => {
-                if(word === alias.toLowerCase()) {
+                if(word.indexOf(alias.toLowerCase()) !== -1) {
                     found = { Id: category.Id };
                 }                
             });

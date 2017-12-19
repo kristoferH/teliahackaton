@@ -10,7 +10,7 @@
     "content_scripts": [
         {
             "matches": ["https://www.telia.se/*"],
-            "js": ["external/socket.io.js","external/angular.min.js", "hack.js"]
+            "js": ["external/socket.io.js", "hack.js"]
         }
     ]
 }
