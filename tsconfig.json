@@ -1,11 +1,11 @@
 {
     "compilerOptions": {
-        "module": "system",
+        "module": "umd",
         "noImplicitAny": true,
         "removeComments": true,
         "preserveConstEnums": true,
-        "outFile": "dist/hack-client.js",
-        "sourceMap": true
+        "sourceMap": true,
+        "outDir" : "dist"
     },
     "include": [
         "src/**/*"
