@@ -66,7 +66,7 @@ const checkIfValid = (input: string, currentStep: number) : [boolean, string] =>
     return [false, ''];
 }
 
-if(window.location.pathname === '/privat/support/felanmalan/') {
+if(window.location.pathname === '/privat/support/felanmalan/' || window.location.pathname === '/privat/support/felanmalan') {
    
     socket.emit('init', {});
     
@@ -81,7 +81,7 @@ if(window.location.pathname === '/privat/support/felanmalan/') {
     });
 }
 
-if(window.location.pathname === '/privat/support/felanmalan/bredband') {
+if(window.location.pathname === '/privat/support/felanmalan/bredband' || window.location.pathname === '/privat/support/felanmalan/bredband/') {
     
     socket.on('step_1', function (data: any) {
         

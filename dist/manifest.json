@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    
+    "name": "Telia hackaton voice support",
+    "description": "",
+    "version": "1.0",
+    "permissions": [
+        "activeTab"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["https://www.telia.se/*"],
+            "js": ["external/socket.io.js","external/angular.min.js", "hack.js"]
+        }
+    ]
+}
